@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-facade-xml type="seed-initial">
+    <moqui.security.ArtifactGroup artifactGroupId="FORM_APP"
+                                  description="MK New Employment Form App(via root screen)"/>
+    <moqui.security.ArtifactGroupMember artifactGroupId="FORM_APP"
+                                        artifactName="component://mk-application-form/screen/mkApplicationForm.xml"
+                                        artifactTypeEnumId="AT_XML_SCREEN" inheritAuthz="Y"/>
+    <moqui.security.ArtifactAuthz artifactAuthzId="Form_ALL"
+                                  userGroupId="ALL_USERS" artifactGroupId="FORM_APP"
+                                  authzTypeEnumId="AUTHZT_ALWAYS" authzActionEnumId="AUTHZA_ALL"/>
+</entity-facade-xml>
