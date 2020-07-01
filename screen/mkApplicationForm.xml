@@ -65,6 +65,13 @@
                 </default-field>
             </field>
 
+            <field name="organizationName">
+                <default-field title="Current Employer *">
+                    <text-line size="30" />
+                </default-field>
+            </field>
+
+
 
             <field name="submitButton"><default-field title="Submit Application"><submit/></default-field></field>
         </form-single>
