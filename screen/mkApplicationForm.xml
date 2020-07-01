@@ -8,7 +8,10 @@
 
     <widgets>
 
+
         <form-single name="CreateApplicationForm" transition="createApplication" map="content">
+
+            <label type="h3" text="Personal Information"/>
 
             <field name="contentFile">
                 <default-field title="Upload resume">
@@ -71,6 +74,38 @@
                 </default-field>
             </field>
 
+            <label type="h3" text="Links"/>
+
+            <field name="infoString">
+                <default-field title="LinkedIn URL">
+                    <text-line size="30" />
+                </default-field>
+            </field>
+
+            <field name="infoString">
+                <default-field title="GitHub URL">
+                    <text-line size="30" />
+                </default-field>
+            </field>
+
+            <field name="infoString">
+                <default-field title="Portfolio URL">
+                    <text-line size="30" />
+                </default-field>
+            </field>
+
+            <field name="infoString">
+                <default-field title="Other URL">
+                    <text-line size="30" />
+                </default-field>
+            </field>
+
+            <label type="h3" text="Please answer the following questions:"/>
+
+            <field name="refferedByEnumId"><default-field title="How did you hear about MK Decision?">
+                <widget-template-include location="component://webroot/template/screen/BasicWidgetTemplates.xml#enumDropDown">
+                    <set field="enumTypeId" value="EmploymentApplicationReferredBy"/></widget-template-include>
+            </default-field></field>
 
 
             <field name="submitButton"><default-field title="Submit Application"><submit/></default-field></field>
