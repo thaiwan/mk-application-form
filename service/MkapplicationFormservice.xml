@@ -11,9 +11,11 @@
             <parameter name="contactNumber"/>
             <parameter name="address1" required="true"/>
             <parameter name="unitNumber"/>
-            <parameter name="city" required="true"/>
-            <parameter name="stateProvinceGeoId"/>
+            <parameter name="city" required="true"/>            
             <parameter name="postalCode" required="true"/> 
+            <parameter name="stateProvinceGeoId" required="true"/>
+            <parameter name="countryGeoId" required="true"/>
+            
             <parameter name="organizationName" required="true"/> 
             <parameter name="contentFile" type="org.apache.commons.fileupload.FileItem"/>
         </in-parameters>
