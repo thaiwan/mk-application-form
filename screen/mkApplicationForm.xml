@@ -131,14 +131,14 @@
 					<file />
 				</default-field>
 			</field>
-			<field name="contentTypeEnumId">
+			<!-- <field name="contentTypeEnumId">
 				<default-field title="Content Type">
 					<widget-template-include location="component://webroot/template/screen/BasicWidgetTemplates.xml#enumDropDown">
 						<set field="enumTypeId" value="PartyContentType" />
 						<set field="allowEmpty" value="true" />
 					</widget-template-include>
 				</default-field>
-			</field>
+			</field> -->
 			<field name="submitButton">
 				<default-field title="Submit Application">
 					<submit />
