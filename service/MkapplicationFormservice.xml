@@ -1,0 +1,34 @@
+<services>
+
+    <service verb="create" noun="Applicant"> 
+        <in-parameters>
+            <parameter name="firstName" required="true"/>
+            <parameter name="middleName"/>
+            <parameter name="lastName" required="true"/>
+            <parameter name="emailAddress" required="true">
+                <text-email/>
+            </parameter>
+            <parameter name="contactNumber"/>
+            <parameter name="address1" required="true"/>
+            <parameter name="unitNumber"/>
+            <parameter name="city" required="true"/>
+            <parameter name="stateProvinceGeoId"/>
+            <parameter name="postalCode" required="true"/> 
+            <parameter name="organizationName" required="true"/> 
+            <parameter name="contentFile" type="org.apache.commons.fileupload.FileItem"/>
+        </in-parameters>
+        <out-parameters>
+            <parameter name="partyId" required="true"/>
+        </out-parameters>
+
+        <actions>
+       
+            <service-call name="mantle.party.PartyServices.create#PersonCustomer" in-map="context + [partyTypeEnumId:'PtyPerson']" out-map="context"/>
+            <set field="thisPartyId" from="partyId"/>
+            <service-call name="mantle.party.PartyServices.create#PartyContent" in-map="context" out-map="context" />
+        </actions>
+    </service>
+
+
+
+</services>

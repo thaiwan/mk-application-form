@@ -3,8 +3,11 @@
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd"
         require-authentication="anonymous-all">
 
-<!--    <transition name="createApplication"><service-call name="org.moqui.impl.ScreenServices.create#FormResponse"/>-->
-<!--        <default-response url="."/></transition>-->
+    <transition name="createApplication">
+        <service-call name="MkapplicationFormservice.create#Applicant" in-map="context" out-map="context"/>
+        <!-- <service-call name="mantle.party.PartyServices.create#PartyContent" in-map="context" out-map="context" /> -->
+        <default-response url="." />
+    </transition>
 
     <widgets>
 
