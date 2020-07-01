@@ -4,7 +4,7 @@
         require-authentication="anonymous-all">
 
    <transition name="createApplication">
-       <service-call name="MkapplicationFormservice.create#Applicant"/>
+       <service-call name="MkapplicationFormService.create#Applicant"/>
     <default-response url="."/>
 </transition>
 

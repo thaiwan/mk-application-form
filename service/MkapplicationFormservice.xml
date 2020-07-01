@@ -21,9 +21,7 @@
         </out-parameters>
 
         <actions>
-   
-
-
+            <service-call name="mantle.party.PartyServices.create#Person" in-map="context + [partyTypeEnumId:'PtyPerson']" out-map="context"/>
 
         </actions>
     </service>
