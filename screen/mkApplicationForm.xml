@@ -65,7 +65,7 @@
                 </default-field>
             </field>
 
-            <field name="stateProvinceGeoId"><default-field title="State *">
+            <!-- <field name="stateProvinceGeoId"><default-field title="State *">
                 <drop-down>
                     <option key="USA_AL" text="Alabama"/>
                     <option key="USA_AK" text="Alaska"/>
@@ -128,7 +128,22 @@
                     <option key="USA_AP" text="Armed Forces Pacific"/>
                     <option key="USA_AE" text="Armed Forces Others"/>
                 </drop-down>
-            </default-field></field>
+            </default-field></field> -->
+            <field name="stateProvinceGeoId">
+                <default-field>
+                    <drop-down>                   
+                       
+                        <entity-options key="${toGeoId}" text="${geoName}">
+                            <entity-find entity-name="moqui.basic.GeoAssocAndToDetail">
+                                <econdition field-name="geoId" value="USA"/>
+                                <econdition field-name="geoAssocTypeEnumId" value="GAT_REGIONS"/>
+                                <order-by field-name="geoName"/>
+                            </entity-find>
+                     </entity-options>
+                    </drop-down>
+                
+               </default-field>
+            </field>
 
             <field name="organizationName">
                 <default-field title="Current Employer *">
